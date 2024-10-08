@@ -2,12 +2,51 @@ public class Conta {
     private int numero;
     private String agencia;
     private String nomeCliente;
-    private Double saldo;
+    private Double saldo = 0.0;
 
     //construtor
     public Conta (){
     }
 
+    public void atualizarSaldo(Double valor){
+        this.saldo += valor;
+    }
+
+    public String preencherNumeroConta(int num){
+        if (num > 0)
+        {
+            this.setNumero(num);
+            return "Numero da conta salvo com sucesso!";
+        }
+        else
+        {
+            return "Numero tem que ser maior que zero!";
+        }
+    }
+
+    public String preencherAgenciaConta(String ag){
+        if (!ag.isEmpty())
+        {
+            this.setAgencia(ag);
+            return "Agencia salva com sucesso!";
+        } 
+        else 
+        {
+            return "Agencia não pode ser vazia!";
+        }  
+    }
+
+    public String preencherNomeCliente(String nome){
+        if (!nome.isEmpty() && nome.length() > 5)
+        {
+            this.setNomeCliente(nome);
+            return "Nome do cliente salvo com sucesso!";
+        } 
+        else 
+        {
+            return "Nome do Cliente não pode ser vazio ou menor que 5 caracteres!";
+        }  
+    }
 
     //#region getters and setters
     public void setNumero(int numero){
