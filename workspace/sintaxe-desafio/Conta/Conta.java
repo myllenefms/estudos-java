@@ -16,7 +16,7 @@ public class Conta {
         if (num > 0)
         {
             this.setNumero(num);
-            return "Numero da conta salvo com sucesso!";
+            return "";
         }
         else
         {
@@ -28,7 +28,7 @@ public class Conta {
         if (!ag.isEmpty())
         {
             this.setAgencia(ag);
-            return "Agencia salva com sucesso!";
+            return "";
         } 
         else 
         {
@@ -40,7 +40,7 @@ public class Conta {
         if (!nome.isEmpty() && nome.length() > 5)
         {
             this.setNomeCliente(nome);
-            return "Nome do cliente salvo com sucesso!";
+            return "";
         } 
         else 
         {
